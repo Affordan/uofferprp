@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import * as Tabs from "@radix-ui/react-tabs";
 import type { University } from "@/types/university";
 import { SourceDocList } from "./SourceDocList";
@@ -97,9 +98,37 @@ export function UniversityDetailClient({ university }: Props) {
                   fontSize: 12,
                 }}
               >
-                📍 {university.province}
+                {university.province}
               </span>
             </div>
+
+            {/* Tags */}
+            {university.tags && university.tags.length > 0 && (
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
+                {university.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    style={{
+                      padding: "2px 7px",
+                      borderRadius: 4,
+                      background: "var(--color-bg-subtle)",
+                      border: "1px solid var(--color-border)",
+                      fontSize: 11,
+                      color: "var(--color-text-muted)",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {university.discipline_note && (
+              <p style={{ fontSize: 12, color: "var(--color-text-faint)", margin: "0 0 8px" }}>
+                {university.discipline_note}
+              </p>
+            )}
 
             {university.intro && (
               <p
@@ -116,7 +145,24 @@ export function UniversityDetailClient({ university }: Props) {
             )}
           </div>
 
-          {/* 统计数字 */}
+          {/* Stats + compare link */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "flex-end" }}>
+            <Link
+              href={`/compare?universities=${encodeURIComponent(university.name)}`}
+              style={{
+                padding: "6px 14px",
+                borderRadius: 6,
+                border: "1px solid var(--color-primary)",
+                background: "var(--color-primary-50)",
+                color: "var(--color-primary)",
+                fontSize: 12,
+                fontWeight: 600,
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
+              加入对比
+            </Link>
           <div
             style={{
               display: "flex",
@@ -152,6 +198,7 @@ export function UniversityDetailClient({ university }: Props) {
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </div>
@@ -221,7 +268,7 @@ export function UniversityDetailClient({ university }: Props) {
                 border: "1px solid #fde68a",
               }}
             >
-              ⚠️ 分数线数据为演示数据，不代表真实录取结果。如需完整查询，请前往{" "}
+              分数线数据为演示数据，不代表真实录取结果。如需完整查询，请前往{" "}
               <a
                 href={`/scores?university=${encodeURIComponent(university.name)}`}
                 style={{ color: "var(--color-primary)", fontWeight: 500 }}

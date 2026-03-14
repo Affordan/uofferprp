@@ -75,7 +75,7 @@ function UniversitiesPageInner() {
           color: "var(--color-text-muted)",
         }}
       >
-        📌 当前收录为演示数据，强基计划试点高校共 39 所，正式数据持续录入中。
+        当前收录 39 所强基计划试点高校基础信息，正式数据持续完善中。
       </div>
     </>
   );

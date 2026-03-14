@@ -18,7 +18,7 @@ export function Navbar() {
   return (
     <header
       style={{
-        background: "var(--color-bg-card)",
+        background: "rgba(255,255,255,0.95)",
         borderBottom: "1px solid var(--color-border)",
         position: "sticky",
         top: 0,
@@ -31,14 +31,14 @@ export function Navbar() {
           maxWidth: 1200,
           margin: "0 auto",
           padding: "0 24px",
-          height: 60,
+          height: 56,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: 32,
+          gap: 24,
         }}
       >
-        {/* Logo */}
+        {/* Brand */}
         <Link
           href="/"
           style={{
@@ -54,35 +54,36 @@ export function Navbar() {
               display: "inline-flex",
               alignItems: "center",
               justifyContent: "center",
-              width: 32,
-              height: 32,
-              borderRadius: 8,
+              width: 28,
+              height: 28,
+              borderRadius: 6,
               background: "var(--color-primary)",
               color: "#fff",
-              fontWeight: 700,
-              fontSize: 14,
+              fontWeight: 800,
+              fontSize: 12,
+              letterSpacing: "-0.02em",
             }}
           >
-            强基
+            U
           </span>
           <span
             style={{
               fontWeight: 700,
-              fontSize: 16,
+              fontSize: 15,
               color: "var(--color-text)",
               letterSpacing: "-0.01em",
             }}
           >
-            强基信息平台
+            Uoffer <span style={{ fontWeight: 400, color: "var(--color-text-muted)" }}>研录</span>
           </span>
         </Link>
 
-        {/* Nav links */}
+        {/* Navigation */}
         <nav
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 4,
+            gap: 2,
             overflowX: "auto",
           }}
         >
@@ -97,18 +98,18 @@ export function Navbar() {
                 href={item.href}
                 style={{
                   padding: "6px 12px",
-                  borderRadius: 8,
-                  fontSize: 14,
+                  borderRadius: 6,
+                  fontSize: 13,
                   fontWeight: isActive ? 600 : 400,
                   color: isActive
                     ? "var(--color-primary)"
                     : "var(--color-text-muted)",
                   background: isActive
-                    ? "var(--color-primary-light)"
+                    ? "var(--color-primary-50)"
                     : "transparent",
                   textDecoration: "none",
                   whiteSpace: "nowrap",
-                  transition: "color 0.12s, background 0.12s",
+                  transition: "color 0.1s, background 0.1s",
                 }}
               >
                 {item.label}

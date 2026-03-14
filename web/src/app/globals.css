@@ -1,43 +1,48 @@
 @import "tailwindcss";
 
-/* ── 设计 Token ─────────────────────────────────────── */
+/* ── Design Tokens ──────────────────────────────────── */
 :root {
-  /* 主色：靛蓝 */
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
+  /* Primary: deep indigo-blue */
+  --color-primary: #1e40af;
+  --color-primary-hover: #1e3a8a;
   --color-primary-light: #dbeafe;
+  --color-primary-50: #eff6ff;
 
-  /* 辅色：青绿 */
-  --color-accent: #0891b2;
-  --color-accent-light: #cffafe;
+  /* Accent: teal */
+  --color-accent: #0f766e;
+  --color-accent-light: #ccfbf1;
 
-  /* 点缀：柔金 */
-  --color-gold: #d97706;
+  /* Gold for warnings/highlights */
+  --color-gold: #b45309;
   --color-gold-light: #fef3c7;
 
-  /* 背景：雾白 + 极浅灰蓝 */
-  --color-bg: #f8fafc;
+  /* Backgrounds */
+  --color-bg: #fafbfc;
   --color-bg-card: #ffffff;
   --color-bg-subtle: #f1f5f9;
 
-  /* 文字 */
+  /* Text */
   --color-text: #0f172a;
-  --color-text-muted: #64748b;
+  --color-text-muted: #475569;
   --color-text-faint: #94a3b8;
 
-  /* 边框 */
+  /* Borders */
   --color-border: #e2e8f0;
   --color-border-strong: #cbd5e1;
 
-  /* 来源级别 */
-  --color-source-a: #16a34a;
+  /* Source levels */
+  --color-source-a: #15803d;
   --color-source-a-bg: #dcfce7;
-  --color-source-b: #2563eb;
+  --color-source-b: #1e40af;
   --color-source-b-bg: #dbeafe;
-  --color-source-c: #d97706;
+  --color-source-c: #b45309;
   --color-source-c-bg: #fef3c7;
   --color-source-d: #64748b;
   --color-source-d-bg: #f1f5f9;
+
+  /* Status */
+  --color-danger: #dc2626;
+  --color-danger-light: #fef2f2;
 }
 
 @theme inline {
@@ -45,36 +50,60 @@
   --color-foreground: var(--color-text);
 }
 
-/* ── 全局基础 ───────────────────────────────────────── */
+/* ── Base ───────────────────────────────────────────── */
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+    sans-serif);
   line-height: 1.6;
+  margin: 0;
 }
 
-/* ── 公共工具类 ─────────────────────────────────────── */
+/* ── Utility classes ────────────────────────────────── */
 .card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .card-hover {
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .card-hover:hover {
-  box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.08);
-  transform: translateY(-1px);
+  box-shadow: 0 2px 8px 0 rgba(15, 23, 42, 0.06);
+  border-color: var(--color-border-strong);
+}
+
+/* ── Focus styles ───────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ── Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 3px;
 }

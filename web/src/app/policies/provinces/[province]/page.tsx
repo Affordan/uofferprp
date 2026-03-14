@@ -289,7 +289,7 @@ export default async function ProvincePolicyPage({ params }: Props) {
           color: "var(--color-text-muted)",
         }}
       >
-        📌 当前数据为演示数据，仅用于功能展示。请以各省教育考试院官方发布为准。
+        当前数据为演示数据，仅用于功能展示。请以各省教育考试院官方发布为准。
       </div>
     </div>
   );

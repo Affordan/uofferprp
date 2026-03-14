@@ -229,7 +229,7 @@ export function ScoreFilter({ years, provinces, universities }: Props) {
             alignItems: "flex-start",
           }}
         >
-          <span>⚠️</span>
+          <strong>提示：</strong>
           <span>
             跨省对比时，各省高考满分、赋分方式不同，分数线不可直接比较，仅供参考。
           </span>

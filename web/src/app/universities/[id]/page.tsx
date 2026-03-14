@@ -25,7 +25,7 @@ export default async function UniversityDetailPage({ params }: Props) {
             color: "var(--color-text-muted)",
           }}
         >
-          <div style={{ fontSize: 40, marginBottom: 16, opacity: 0.3 }}>🏫</div>
+          <div style={{ fontSize: 32, marginBottom: 16, opacity: 0.2, fontWeight: 300 }}>&mdash;</div>
           <h1
             style={{
               fontSize: 20,

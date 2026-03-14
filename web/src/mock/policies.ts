@@ -1,11 +1,13 @@
 import type { PolicyItem } from "@/types/policy";
 
 /**
- * Mock 数据 — 仅用于演示，非真实官方政策原文
+ * 政策数据
+ * 国家级链接为已验证的公开链接
+ * 省级链接：部分为真实公开链接，部分为演示占位（标题带【演示数据】前缀）
  * 政策摘要为结构性示意，请以官方来源为准
  */
 export const mockPolicies: PolicyItem[] = [
-  // ── 国家级 ──────────────────────────────────────────
+  // ── 国家级（已验证公开链接）──────────────────────────
   {
     id: "p001",
     scope_type: "national",
@@ -42,7 +44,7 @@ export const mockPolicies: PolicyItem[] = [
       is_official: true,
     },
   },
-  // ── 省级：北京 ──────────────────────────────────────
+  // ── 省级：北京（演示数据）──────────────────────────────
   {
     id: "p003",
     scope_type: "province",
@@ -55,14 +57,15 @@ export const mockPolicies: PolicyItem[] = [
       id: "src-p003",
       title: "【演示数据】北京市2024年强基计划报考指引",
       source_level: "A",
-      publisher: "北京市教育考试院",
-      official_url: "https://example.com/beijing-2024-qjjh-mock",
+      publisher: "北京教育考试院",
+      official_url: "https://www.bjeea.cn/",
       publish_date: "2024-04-10",
       doc_type: "notice",
       is_official: true,
+      parse_status: "pending",
     },
   },
-  // ── 省级：浙江 ──────────────────────────────────────
+  // ── 省级：浙江（演示数据）──────────────────────────────
   {
     id: "p004",
     scope_type: "province",
@@ -76,13 +79,14 @@ export const mockPolicies: PolicyItem[] = [
       title: "【演示数据】浙江省2024年强基计划招生简章汇编",
       source_level: "A",
       publisher: "浙江省教育考试院",
-      official_url: "https://example.com/zhejiang-2024-qjjh-mock",
+      official_url: "https://www.zjzs.net/",
       publish_date: "2024-04-12",
       doc_type: "brochure",
       is_official: true,
+      parse_status: "pending",
     },
   },
-  // ── 省级：广东 ──────────────────────────────────────
+  // ── 省级：广东（演示数据）──────────────────────────────
   {
     id: "p005",
     scope_type: "province",
@@ -96,13 +100,14 @@ export const mockPolicies: PolicyItem[] = [
       title: "【演示数据】广东省2024年强基计划考生须知",
       source_level: "A",
       publisher: "广东省教育考试院",
-      official_url: "https://example.com/guangdong-2024-qjjh-mock",
+      official_url: "https://eea.gd.gov.cn/",
       publish_date: "2024-04-15",
       doc_type: "notice",
       is_official: true,
+      parse_status: "pending",
     },
   },
-  // ── 省级：江苏 ──────────────────────────────────────
+  // ── 省级：江苏（演示数据）──────────────────────────────
   {
     id: "p006",
     scope_type: "province",
@@ -116,10 +121,11 @@ export const mockPolicies: PolicyItem[] = [
       title: "【演示数据】江苏省2024年强基计划报考说明",
       source_level: "A",
       publisher: "江苏省教育考试院",
-      official_url: "https://example.com/jiangsu-2024-qjjh-mock",
+      official_url: "https://www.jseea.cn/",
       publish_date: "2024-04-08",
       doc_type: "notice",
       is_official: true,
+      parse_status: "pending",
     },
   },
 ];

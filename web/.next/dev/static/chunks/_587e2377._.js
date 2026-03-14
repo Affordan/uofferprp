@@ -45,7 +45,7 @@ function Navbar() {
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         style: {
-            background: "var(--color-bg-card)",
+            background: "rgba(255,255,255,0.95)",
             borderBottom: "1px solid var(--color-border)",
             position: "sticky",
             top: 0,
@@ -57,11 +57,11 @@ function Navbar() {
                 maxWidth: 1200,
                 margin: "0 auto",
                 padding: "0 24px",
-                height: 60,
+                height: 56,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                gap: 32
+                gap: 24
             },
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -79,15 +79,16 @@ function Navbar() {
                                 display: "inline-flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                width: 32,
-                                height: 32,
-                                borderRadius: 8,
+                                width: 28,
+                                height: 28,
+                                borderRadius: 6,
                                 background: "var(--color-primary)",
                                 color: "#fff",
-                                fontWeight: 700,
-                                fontSize: 14
+                                fontWeight: 800,
+                                fontSize: 12,
+                                letterSpacing: "-0.02em"
                             },
-                            children: "强基"
+                            children: "U"
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/Navbar.tsx",
                             lineNumber: 52,
@@ -96,14 +97,27 @@ function Navbar() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
                                 fontWeight: 700,
-                                fontSize: 16,
+                                fontSize: 15,
                                 color: "var(--color-text)",
                                 letterSpacing: "-0.01em"
                             },
-                            children: "强基信息平台"
-                        }, void 0, false, {
+                            children: [
+                                "Uoffer ",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    style: {
+                                        fontWeight: 400,
+                                        color: "var(--color-text-muted)"
+                                    },
+                                    children: "研录"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/layout/Navbar.tsx",
+                                    lineNumber: 77,
+                                    columnNumber: 20
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/components/layout/Navbar.tsx",
-                            lineNumber: 68,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this)
                     ]
@@ -116,7 +130,7 @@ function Navbar() {
                     style: {
                         display: "flex",
                         alignItems: "center",
-                        gap: 4,
+                        gap: 2,
                         overflowX: "auto"
                     },
                     children: NAV_ITEMS.map((item)=>{
@@ -125,25 +139,25 @@ function Navbar() {
                             href: item.href,
                             style: {
                                 padding: "6px 12px",
-                                borderRadius: 8,
-                                fontSize: 14,
+                                borderRadius: 6,
+                                fontSize: 13,
                                 fontWeight: isActive ? 600 : 400,
                                 color: isActive ? "var(--color-primary)" : "var(--color-text-muted)",
-                                background: isActive ? "var(--color-primary-light)" : "transparent",
+                                background: isActive ? "var(--color-primary-50)" : "transparent",
                                 textDecoration: "none",
                                 whiteSpace: "nowrap",
-                                transition: "color 0.12s, background 0.12s"
+                                transition: "color 0.1s, background 0.1s"
                             },
                             children: item.label
                         }, item.href, false, {
                             fileName: "[project]/src/components/layout/Navbar.tsx",
-                            lineNumber: 95,
+                            lineNumber: 96,
                             columnNumber: 15
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/src/components/layout/Navbar.tsx",
-                    lineNumber: 81,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, this)
             ]

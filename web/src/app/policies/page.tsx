@@ -11,28 +11,22 @@ export const metadata: Metadata = { title: "政策专题" };
 
 const SCOPE_ENTRIES = [
   {
-    icon: "🏛️",
     title: "国家政策",
     desc: "教育部根政策、阳光高考专题、国家级文件",
     href: "/policies/national",
-    color: "#7c3aed",
-    bg: "#ede9fe",
+    color: "#6d28d9",
   },
   {
-    icon: "📍",
     title: "省级信息",
     desc: "省级教育考试院通知、报考说明、官方来源汇总",
     href: "#province-section",
     color: "var(--color-accent)",
-    bg: "var(--color-accent-light)",
   },
   {
-    icon: "🏫",
     title: "高校招生简章",
     desc: "各试点高校招生简章、入围规则、培养方案",
     href: "/universities",
     color: "var(--color-gold)",
-    bg: "var(--color-gold-light)",
   },
 ];
 
@@ -71,26 +65,10 @@ export default function PoliciesPage() {
             <div
               className="card card-hover"
               style={{
-                padding: "20px 24px",
-                borderTop: `3px solid ${entry.color}`,
-                cursor: "pointer",
+                padding: "18px 22px",
+                borderLeft: `3px solid ${entry.color}`,
               }}
             >
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 40,
-                  height: 40,
-                  borderRadius: 10,
-                  background: entry.bg,
-                  fontSize: 20,
-                  marginBottom: 12,
-                }}
-              >
-                {entry.icon}
-              </div>
               <div
                 style={{
                   fontSize: 15,
@@ -209,7 +187,7 @@ export default function PoliciesPage() {
           color: "var(--color-text-muted)",
         }}
       >
-        📌 当前数据为演示数据，仅用于功能展示。正式数据以各教育主管部门官方发布为准。
+        当前数据为演示数据，仅用于功能展示。正式数据以各教育主管部门官方发布为准。
       </div>
     </div>
   );

@@ -52,7 +52,7 @@ export function UniversityCard({ university }: Props) {
         {/* 省份 */}
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <span style={{ fontSize: 12, color: "var(--color-text-muted)" }}>
-            📍 {university.province}
+            {university.province}
           </span>
         </div>
 

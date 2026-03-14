@@ -2,7 +2,9 @@
   "/about/page": "app/about/page.js",
   "/compare/page": "app/compare/page.js",
   "/page": "app/page.js",
+  "/policies/national/page": "app/policies/national/page.js",
   "/policies/page": "app/policies/page.js",
+  "/policies/provinces/[province]/page": "app/policies/provinces/[province]/page.js",
   "/scores/page": "app/scores/page.js",
   "/universities/[id]/page": "app/universities/[id]/page.js",
   "/universities/page": "app/universities/page.js"

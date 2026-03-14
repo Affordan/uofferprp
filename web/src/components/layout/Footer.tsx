@@ -27,120 +27,105 @@ export function Footer() {
             gap: 24,
           }}
         >
-          {/* 品牌 */}
           <div style={{ maxWidth: 320 }}>
             <div
               style={{
                 fontWeight: 700,
-                fontSize: 15,
+                fontSize: 14,
                 color: "var(--color-text)",
                 marginBottom: 6,
               }}
             >
-              强基信息平台
+              Uoffer 研录
             </div>
             <p
               style={{
-                fontSize: 13,
+                fontSize: 12,
                 color: "var(--color-text-muted)",
                 lineHeight: 1.7,
               }}
             >
-              面向考生、家长与升学研究者的强基计划官方政策与分数线查询平台。
-              所有数据尽量来源于官方渠道，并保留原始出处。
+              面向考生、家长与升学研究者的强基计划信息查询平台。
+              数据来源于官方渠道，保留原始出处与来源等级标注。
             </p>
           </div>
 
-          {/* 链接 */}
-          <div
-            style={{
-              display: "flex",
-              gap: 40,
-              flexWrap: "wrap",
-            }}
-          >
-            <div>
-              <div
-                style={{
-                  fontSize: 12,
-                  fontWeight: 600,
-                  color: "var(--color-text-muted)",
-                  marginBottom: 10,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                功能
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {[
-                  { label: "政策专题", href: "/policies" },
-                  { label: "分数线查询", href: "/scores" },
-                  { label: "高校库", href: "/universities" },
-                  { label: "高校对比", href: "/compare" },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    style={{
-                      fontSize: 13,
-                      color: "var(--color-text-muted)",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <div
-                style={{
-                  fontSize: 12,
-                  fontWeight: 600,
-                  color: "var(--color-text-muted)",
-                  marginBottom: 10,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                说明
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                <Link
-                  href="/about"
-                  style={{
-                    fontSize: 13,
-                    color: "var(--color-text-muted)",
-                    textDecoration: "none",
-                  }}
-                >
-                  数据说明
-                </Link>
-              </div>
-            </div>
+          <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
+            <FooterGroup
+              title="功能"
+              links={[
+                { label: "政策专题", href: "/policies" },
+                { label: "分数线查询", href: "/scores" },
+                { label: "高校库", href: "/universities" },
+                { label: "高校对比", href: "/compare" },
+              ]}
+            />
+            <FooterGroup
+              title="关于"
+              links={[
+                { label: "数据说明", href: "/about" },
+              ]}
+            />
           </div>
         </div>
 
-        {/* 底部声明 */}
         <div
           style={{
             borderTop: "1px solid var(--color-border)",
             paddingTop: 16,
-            fontSize: 12,
+            fontSize: 11,
             color: "var(--color-text-faint)",
             lineHeight: 1.6,
           }}
         >
-          <p>
-            当前展示数据为演示用途，不代表真实官方录取结果。请以各高校及教育主管部门官方发布为准。
+          <p style={{ margin: 0 }}>
+            当前为演示版本，展示数据不代表真实官方录取结果。请以各高校及教育主管部门官方发布为准。
           </p>
-          <p style={{ marginTop: 4 }}>
-            © {new Date().getFullYear()} 强基信息平台 Demo
+          <p style={{ margin: "4px 0 0" }}>
+            &copy; {new Date().getFullYear()} Uoffer 研录
           </p>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterGroup({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) {
+  return (
+    <div>
+      <div
+        style={{
+          fontSize: 11,
+          fontWeight: 600,
+          color: "var(--color-text-muted)",
+          marginBottom: 10,
+          textTransform: "uppercase",
+          letterSpacing: "0.05em",
+        }}
+      >
+        {title}
+      </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            style={{
+              fontSize: 12,
+              color: "var(--color-text-muted)",
+              textDecoration: "none",
+            }}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
