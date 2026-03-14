@@ -6,3 +6,5 @@ export { mockProvinces } from "./provinces";
 export { mockUniversities } from "./universities";
 export { mockScores } from "./scores";
 export { mockPolicies } from "./policies";
+export { mockBrochures } from "./brochures";
+export { mockUniversityDocs } from "./universityDocs";
