@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///F:/Dev/uofferprp/web/src/app/policies/page.tsx"],"sourcesContent":["import type { Metadata } from \"next\";\n\nexport const metadata: Metadata = { title: \"政策专题\" };\n\nexport default function PoliciesPage() {\n  return (\n    <div style={{ maxWidth: 1200, margin: \"0 auto\", padding: \"40px 24px\" }}>\n      <h1 style={{ fontSize: 28, fontWeight: 700, marginBottom: 8 }}>政策专题</h1>\n      <p style={{ color: \"var(--color-text-muted)\", marginBottom: 32 }}>\n        强基计划国家政策、省级通知与高校招生简章归档\n      </p>\n      <p style={{ color: \"var(--color-text-faint)\", fontSize: 13 }}>\n        页面建设中，即将上线…\n      </p>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;AAEO,MAAM,WAAqB;IAAE,OAAO;AAAO;AAEnC,SAAS;IACtB,qBACE,8OAAC;QAAI,OAAO;YAAE,UAAU;YAAM,QAAQ;YAAU,SAAS;QAAY;;0BACnE,8OAAC;gBAAG,OAAO;oBAAE,UAAU;oBAAI,YAAY;oBAAK,cAAc;gBAAE;0BAAG;;;;;;0BAC/D,8OAAC;gBAAE,OAAO;oBAAE,OAAO;oBAA2B,cAAc;gBAAG;0BAAG;;;;;;0BAGlE,8OAAC;gBAAE,OAAO;oBAAE,OAAO;oBAA2B,UAAU;gBAAG;0BAAG;;;;;;;;;;;;AAKpE"}}]
+}

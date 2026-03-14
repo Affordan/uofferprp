@@ -1,0 +1,22 @@
+node_modules
+# system
+.DS_Store
+Thumbs.db
+
+# env
+.env
+.env.*
+!.env.example
+
+# next app
+web/node_modules
+web/.next
+web/out
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# claude local settings
+.claude/settings.local.json
